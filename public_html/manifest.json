@@ -1,0 +1,51 @@
+{
+    "name": "Un-e-Nav",
+    "short_name": "UneNav",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#2e2e2e",
+    "theme_color": "#2e2e2e",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "assets/ico/favicon-72x72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "assets/ico/favicon-96x96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "assets/ico/favicon-128x128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "assets/ico/favicon-144x144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "assets/ico/favicon-152x152.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      },
+      {
+        "src": "assets/ico/favicon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "assets/ico/favicon-384x384.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "assets/ico/favicon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
