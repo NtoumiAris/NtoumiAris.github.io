@@ -1,0 +1,392 @@
+<html lang="en">
+
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>Un-e-Nav</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon-96x96.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+		<style>
+			#map { width: 100%; height: 600px; }
+			
+		</style>
+
+		<!-- Leaflet map -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+		<!-- Link for manifest.json file -->
+		<link rel="manifest" href="/manifest.json">
+
+		<!-- IOS Support -->
+		<link rel="apple-touch-icon" href="/img/assets/ico/favicon-96x96.png">
+		<meta name="apple-mobile-web-app-status-bar" content="#2e2e2e">
+
+		<!-- This needs to exist to pass the lighhouse PWA audit -->
+		<meta name="theme-color" content="#2e2e2e">
+
+    </head>
+
+    <body style="background-color:#2e2e2e">
+
+		<!-- Wrapper -->
+    	<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+				
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+				
+				<div class="logo">
+					<h3><a href="index_eng.html">Un-e-Nav</a></h3>
+				</div>
+				
+				<ul class="list-unstyled menu-elements">
+					<li class="active">
+						<a href="index_eng.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li>
+						<a  href="departments_eng.html"><i class="fas fa-university"></i> Departments</a>
+					</li>
+					<li>
+						<a  href="classrooms_eng.html"><i class="fas fa-chalkboard-teacher"></i> Classrooms </a>
+					</li>
+					<li>
+						<a  href="services_eng.html"><i class="fas fa-users"></i> Services </a>
+					</li>
+					<li>
+						<a  href="index_eng.html"><i class="fas fa-map-marked-alt"></i> All Points of Interest</a>
+					</li>
+					<li>
+						<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+							<i class="fas fa-sync"></i>Other sections
+						</a>
+						<ul class="collapse list-unstyled" id="otherSections">
+							<li>
+								<a class="" href="https://www.upatras.gr/contact/"> Contact </a>
+							</li>
+							<li>
+								<a class="" href="https://www.linkedin.com/in/aris-ntoumi-803b2818a/">For Developers</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+				<div class="to-top">
+					<a class="btn btn-primary btn-customized-3" href="#" role="button">
+	                    <i class="fas fa-arrow-up"></i> Top
+	                </a>
+				</div>
+				
+				<div class="dark-light-buttons">
+						<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+					<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+					<br>
+					<br>
+					<ul>
+						<li style="display:inline">EN |</li>
+						<a href="index.html"><li style="display:inline; color:#c79c2e;" >EL</li></a>
+					  </ul>
+				</div>
+			
+			</nav>
+			<!-- End sidebar -->
+			
+			<!-- Dark overlay -->
+    		<div class="overlay"></div>
+
+			<!-- Content -->
+			<div class="content">
+			
+				<!-- open sidebar menu -->
+				<a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <i class="fas fa-align-left"></i> <span>Menu</span>
+                </a>
+
+				<!-- Section 5 -->
+				<div class="section-5-container section-container" id="section-5">
+					<div class="container">
+						<div class="row">
+							<div class="col section-5 section-description wow fadeIn">
+								<h2><b style="color:rgb(255, 255, 255)"><a href = "index_eng.html"><img src="assets/img/logo.jpg" alt="test" width="315" height="100"></a></b></h2>
+								<div class="divider-1 wow fadeInUp"><span></span></div>
+								<h1 class="wow fadeIn" style="color:rgb(255, 255, 255)"> Explore and Navigate <strong> <br> University Of Patras</strong></h1>
+			                	<div class="description wow fadeInLeft">
+			                	</div>
+								<br>
+								<br>
+								<div class="topnav">
+									 									
+								</div>
+
+								 <a class="btn btn-primary btn-customized" href="index_eng.html" role="button">
+									<i class="fas fa-search-location"></i> Campus Points of Interest
+								</a>
+
+								<br>
+								<br>
+
+								<!-- Section 1 -->
+								<div class="section-1-container section-container" id="section-1" style="color:rgb(255, 255, 255)">
+									<div class="container">
+										<div class="content">
+										  <div class="icon-container">
+											<a href="departments_eng.html"><div class="icon icon-fill"><i class="fas fa-university"></i></div></a>
+											<a href="classrooms_eng.html"><div class="icon icon-enter"><i class="fas fa-chalkboard-teacher"></i></div></a>
+											<a href="services_eng.html"><div class="icon icon-expand"> <i class="fas fa-users"></i></div></a>
+										  </div>
+										</div>
+									  </div>
+									  
+								</div>
+											
+		        <!-- Top content -->
+				
+				<!-- End of Section 1-->
+
+								<div id="map">
+									 </div>
+
+				<!-- This is for the Firebase Firestore-->					 
+			<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+
+												<script>
+
+													  // Initialize Firebase
+			  var firebaseConfig  = {
+				apiKey: "AIzaSyDksCvUExoNFX_aDhInV12nyevARHTNTGU",
+				  authDomain: "unenav.firebaseapp.com",
+				  projectId: "unenav",
+				  storageBucket: "unenav.appspot.com",
+				  messagingSenderId: "595237448358",
+				  appId: "1:595237448358:web:c1c3d7c550b279cedda267",
+				  measurementId: "G-Z43JP8BY5D"
+			  };
+			  firebase.initializeApp(firebaseConfig);
+			  const db = firebase.firestore();
+
+			  // enable offline data
+db.enablePersistence()
+  .catch(function(err) {
+    if (err.code == 'failed-precondition') {
+      // probably multiple tabs open at once
+      console.log('persistance failed');
+    } else if (err.code == 'unimplemented') {
+      // lack of browser support for the feature
+      console.log('persistance not available');
+    }
+  });
+
+													// real-time listener - It was brought from the db.js for testing
+db.collection('classrooms').onSnapshot(snapshot => {
+    //console.log(snapshot.docChanges());
+	var map = L.map('map').setView([38.28611501377319, 21.78675782943554], 16);
+
+													L.tileLayer('https://api.maptiler.com/maps/bright/256/{z}/{x}/{y}.png?key=e4uN5Gd8X5f3V0e5WoRr', {
+													attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+													
+													}).addTo(map);
+    snapshot.docChanges().forEach(change => {
+
+		// This if statement is not necessary
+		if(change.doc.id === 'nkfLCKzZ281DiRNRajPO'){
+		// console.log(change.type, change.doc.id, change.doc.data());
+		// var dep_names = [change.doc.data().dep_title_eng];
+		// var dep_mails = [change.doc.data().dep_email];
+		// var dep_coor_lat = [change.doc.data().dep_location.latitude];
+		// var dep_coor_lon = [change.doc.data().dep_location.longitude];
+		// console.log(dep_names);
+		
+      
+
+        // add the document data to the web page
+		var external = change.doc.data().external_dir;
+		
+		
+		// console.log( longu, shortu,serv_name,ser_loc_lat,ser_loc_long,ser_directions_eng,servdir);
+       // renderDepartments(change.doc.data(), change.doc.id);
+
+	    // This is for checking wheter the mobile is Android or Iphone
+		var userAgent = navigator.userAgent.toLowerCase();
+            var Android = userAgent.indexOf("android") > -1;
+			var Iphone = userAgent.indexOf("iphone") != -1;
+			
+              
+            if(Android) {
+				var external = change.doc.data().external_dir;
+            }
+			else if (Iphone) {
+				var external = change.doc.data().external_dir_iphone;
+			}
+			else {
+				var external = change.doc.data().external_dir;
+				
+			}
+		
+       var class_descr = change.doc.data().class_description_eng;
+       var classname = change.doc.data().class_name_eng;
+		var loc_lat = change.doc.data().class_loc.latitude;
+		var loc_long = change.doc.data().class_loc.longitude;
+        var class_url = change.doc.data().classroom_url;
+		var capacity = change.doc.data().classroom_capacity_eng;
+		var capacity = change.doc.data().classroom_capacity_eng;
+       // renderDepartments(change.doc.data(), change.doc.id);
+      
+
+												// Here starts the code for the map
+													
+
+													// This is for changing the marker icon
+
+													/*var leafletIcon = L.icon({
+														iconUrl: 'assets/ico/marker1.png',
+														iconSize: [50,50],
+														iconAnchor: [25,10]
+													}) */
+
+													
+
+													
+													
+													
+
+													
+													
+													
+												var biology_json =	{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"LineString","coordinates":[[21.7867762,38.28611992],[21.78658308,38.28633992],[21.78669171,38.28638835],[21.78671719,38.28641887],[21.78671183,38.28647361],[21.78667562,38.28655677]]},"id":"5f73d79e-aa7a-4d23-92dc-9eae9cebdd40","properties":{"name":""}},{"type":"Feature","geometry":{"type":"LineString","coordinates":[[21.78667562,38.28655677],[21.786969,38.28671597],[21.78730696,38.2868886],[21.78765833,38.28648123],[21.78858356,38.28540236],[21.78767644,38.28491848],[21.78776588,38.28481318]]},"id":"7bcf7d4e-bd8b-47ed-94ad-7b78805c5963","properties":{"name":""}}]}
+
+
+
+
+
+
+
+
+												var leafletIcon = L.icon({
+														iconUrl: 'assets/ico/marker3.png',
+														iconSize: [20,20],
+														iconAnchor: [25,10]
+													}) 
+
+													var leafletIcon1 = L.icon({
+														iconUrl: 'assets/ico/marker1.png',
+														iconSize: [20,20],
+														iconAnchor: [25,10]
+													}) 
+
+
+
+                                                L.geoJSON(biology_json).addTo(map)
+												var biology = L.marker([loc_lat,loc_long],{icon:leafletIcon}).addTo(map);
+												var prytaneia = L.marker([38.28610794,21.78678295],{icon:leafletIcon1}).addTo(map); 
+												biology.bindPopup("<b>"+ classname+"</b><br>"+class_descr+"<br>"+capacity+"<br>"+'<a href="'+class_url+'" target="_blank">'+class_url+"</a>" + '<button class="btn btn-primary btn-customized" onclick = "window.open('+external+');">GoogleMaps | iMaps </button>');
+												prytaneia.bindPopup("<b>Πρυτανεία <br>"+ '<a href="https://www.upatras.gr" target="_blank">'+"https://www.upatras.gr"+"</a>");
+												
+												}
+												
+
+    }
+	
+	);
+
+  });
+												
+
+													
+
+												</script>
+
+												<br>
+												<br>
+
+												<p>By pasting the current link here and pressing enter you can generate a QR code for this page.</p>
+				
+				<input type="text" id="qr_data" onchange="generateQR()">
+				<div id="qrcode"></div>
+				<!-- QR Code Generator -->
+			
+		<script src="assets/js/qrcode.min.js"></script>
+				<script>
+					var qrdata = document.getElementById('qr_data');
+					var qrcode = new QRCode(document.getElementById("qrcode"));
+					function generateQR() {
+			
+						var data = qrdata.value;
+			
+						qrcode.makeCode(data);
+					}
+				</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		
+		        <!-- Footer -->
+		        <footer class="footer-container">
+		
+			        <div class="container">
+			        	<div class="row">
+		
+		                    <div class="col">
+		                    	&copy; Developed by <a href="https://www.linkedin.com/in/aris-ntoumi-803b2818a/"> ARtD </a> group - <a href="https://www.upatras.gr/">upatras</a>.
+		                    </div>
+		
+		                </div>
+			        </div>
+		
+		        </footer>
+	        
+	        </div>
+	        <!-- End content -->
+        
+        </div>
+        <!-- End wrapper -->
+
+        <!-- Javascript -->
+		<script src="assets/js/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+		<!-- Service Worker -->
+		<script src="assets/js/app.js"></script>
+
+
+			<!-- Google Firestore Database -->
+
+
+			
+		
+
+			<!--	<script src="assets/js/db.js"></script> -->
+    </body>
+
+</html>
